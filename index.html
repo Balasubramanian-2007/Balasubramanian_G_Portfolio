@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balasubramanian G — Backend & AI Systems Engineer | Engineering Blueprint</title>
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Balasubramanian G — Backend & AI Systems Engineer" />
+  <meta name="description" content="Engineering Blueprint portfolio of Balasubramanian G. IT student at National Engineering College specializing in scalable backend architectures, Redis/PostgreSQL concurrency, offline RAG retrieval, and mmWave radar perception." />
+  <meta name="author" content="Balasubramanian G" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://balasubramanian-2007.github.io/My_Portfolio/" />
+  <meta property="og:title" content="Balasubramanian G — Backend & AI Systems Engineer" />
+  <meta property="og:description" content="Engineering Blueprint portfolio featuring distributed systems, Redis Lua atomic bidding, offline RAG semantic retrieval, and 77GHz mmWave radar signal pipelines." />
+  <meta property="og:image" content="./assets/profile.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://balasubramanian-2007.github.io/My_Portfolio/" />
+  <meta property="twitter:title" content="Balasubramanian G — Backend & AI Systems Engineer" />
+  <meta property="twitter:description" content="Engineering Blueprint portfolio featuring distributed systems, Redis Lua atomic bidding, offline RAG semantic retrieval, and 77GHz mmWave radar signal pipelines." />
+  <meta property="twitter:image" content="./assets/profile.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+
+  <!-- Typography: Space Grotesk & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./blueprint.css" />
+</head>
+<body>
+
+  <!-- Viewport Calipers & Drafting Corner Accents -->
+  <div class="bp-viewport-frame" aria-hidden="true">
+    <div class="bp-viewport-corner bp-corner-tl"></div>
+    <div class="bp-viewport-corner bp-corner-tr"></div>
+    <div class="bp-viewport-corner bp-corner-bl"></div>
+    <div class="bp-viewport-corner bp-corner-br"></div>
+  </div>
+
+  <!-- Live Pointer Coordinate Tracker (Desktop) -->
+  <div class="bp-coord-tracker" aria-hidden="true">
+    <span>COORD_X: <span id="coordX">0.0mm</span></span>
+    <span>COORD_Y: <span id="coordY">0.0mm</span></span>
+    <span>PROJ: BG-SYS-26</span>
+  </div>
+
+  <!-- ==========================================================================
+       DRAFTING TOOLBAR & NAVIGATION
+       ========================================================================== -->
+  <header class="bp-nav-header">
+    <div class="bp-nav-container">
+      <a href="#home" class="bp-brand">
+        <span class="bp-brand-badge">BG</span>
+        <span>ENG-BLUEPRINT</span>
+        <span class="bp-nav-meta">DWG NO. 2026-IT</span>
+      </a>
+
+      <!-- Desktop Drafting Index -->
+      <nav aria-label="Main Blueprint Navigation">
+        <ul class="bp-nav-links">
+          <li><a href="#home" class="bp-nav-link active"><span class="bp-nav-num">01</span> ARCH</a></li>
+          <li><a href="#about" class="bp-nav-link"><span class="bp-nav-num">02</span> SPEC</a></li>
+          <li><a href="#projects" class="bp-nav-link"><span class="bp-nav-num">03</span> SCHEMATICS</a></li>
+          <li><a href="#skills" class="bp-nav-link"><span class="bp-nav-num">04</span> SUBSYS</a></li>
+          <li><a href="#experience" class="bp-nav-link"><span class="bp-nav-num">05</span> LOGBOOK</a></li>
+          <li><a href="#metrics" class="bp-nav-link"><span class="bp-nav-num">06</span> METRICS</a></li>
+          <li><a href="#contact" class="bp-nav-link"><span class="bp-nav-num">07</span> DISPATCH</a></li>
+        </ul>
+      </nav>
+
+      <div class="bp-nav-actions">
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="bp-theme-btn" aria-label="Toggle Drawing Mode (Technical Paper / Blueprint Night)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+          </svg>
+          <span id="themeLabel">BLUEPRINT NIGHT</span>
+        </button>
+
+        <!-- Mobile Drawer Toggle -->
+        <button id="mobileToggle" class="bp-mobile-btn" aria-label="Open Technical Navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobileDrawer" class="bp-mobile-drawer" aria-hidden="true">
+    <ul>
+      <li><a href="#home"><span class="mono" style="color:var(--bp-cobalt);">01 //</span> SYSTEM ARCHITECTURE</a></li>
+      <li><a href="#about"><span class="mono" style="color:var(--bp-cobalt);">02 //</span> ENGINEER SPECIFICATION</a></li>
+      <li><a href="#projects"><span class="mono" style="color:var(--bp-cobalt);">03 //</span> SCHEMATICS & PROJECTS</a></li>
+      <li><a href="#skills"><span class="mono" style="color:var(--bp-cobalt);">04 //</span> SUBSYSTEM MATRIX</a></li>
+      <li><a href="#experience"><span class="mono" style="color:var(--bp-cobalt);">05 //</span> ENGINEERING LOGBOOK</a></li>
+      <li><a href="#metrics"><span class="mono" style="color:var(--bp-cobalt);">06 //</span> TELEMETRY & CODING</a></li>
+      <li><a href="#contact"><span class="mono" style="color:var(--bp-cobalt);">07 //</span> DISPATCH TRANSMISSION</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         SECTION 01: HERO — THE ENGINEERING COVER SHEET
+         ========================================================================== -->
+    <section id="home" class="bp-section bp-hero-section">
+      <div class="bp-container">
+        <div class="bp-hero-grid">
+          
+          <!-- Left Cover Sheet Content -->
+          <div class="bp-hero-doc">
+            <div class="bp-doc-stamp">
+              <span class="bp-stamp-indicator"></span>
+              <span class="mono caps">SYSTEM SPECIFICATION SHEET · REV 2026.3</span>
+            </div>
+
+            <h1 class="bp-hero-headline">
+              I BUILD SYSTEMS THAT TURN <span class="highlight-cobalt">IDEAS</span> INTO WORKING SOFTWARE.
+            </h1>
+
+            <p class="bp-hero-desc">
+              I'm <strong>Balasubramanian G</strong>, an Information Technology student at National Engineering College. My focus centers on backend engineering, high-concurrency microservices, offline AI retrieval engines, and real-time radar sensing pipelines.
+            </p>
+
+            <div class="bp-hero-cta">
+              <a href="#projects" class="bp-btn bp-btn-primary">
+                <span>EXPLORE SCHEMATICS</span>
+                <span class="mono">↓</span>
+              </a>
+              <a href="https://github.com/Balasubramanian-2007" target="_blank" rel="noopener noreferrer" class="bp-btn bp-btn-outline">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>VIEW GITHUB REPOS</span>
+                <span class="mono">↗</span>
+              </a>
+              <a href="#contact" class="bp-btn bp-btn-ghost mono">
+                <span>[TRANSMIT MESSAGE]</span>
+              </a>
+            </div>
+
+            <!-- Verified System Telemetry -->
+            <div class="bp-metrics-strip" aria-label="Verified Student & Project Telemetry">
+              <div class="bp-metric-item">
+                <span class="bp-metric-value">9.27</span>
+                <span class="bp-metric-label">CGPA · B.Tech IT</span>
+              </div>
+              <div class="bp-metric-item">
+                <span class="bp-metric-value" id="heroLeetcodeVal">228<span class="accent">+</span></span>
+                <span class="bp-metric-label" id="heroLeetcodeLbl">LeetCode Solved · Verified</span>
+              </div>
+              <div class="bp-metric-item">
+                <span class="bp-metric-value">77<span class="accent">GHz</span></span>
+                <span class="bp-metric-label">FMCW Radar</span>
+              </div>
+              <div class="bp-metric-item">
+                <span class="bp-metric-value">03<span class="accent">+</span></span>
+                <span class="bp-metric-label">Microservices</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Schematic Blueprint Card -->
+          <div class="bp-schematic-card">
+            <div class="bp-schematic-title-block">
+              <span>SCHEMATIC: DISTRIBUTED DATA FLOW</span>
+              <span>SCALE: 1:1</span>
+              <span>ISO 128</span>
+            </div>
+
+            <div class="bp-schematic-interactive-wrap" title="Interactive architecture blueprint showing live signal flow">
+              <canvas id="blueprintCanvas" width="560" height="480"></canvas>
+            </div>
+
+            <div class="bp-schematic-legend">
+              <span>● PACKET PULSE: ACTIVE</span>
+              <span>LUA LOCK: REDIS 7.x</span>
+              <span>LATENCY: &lt;15ms</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 02: ABOUT — ENGINEERING SPECIFICATION
+         ========================================================================== -->
+    <section id="about" class="bp-section">
+      <div class="bp-container">
+        <div class="bp-sec-header">
+          <span class="bp-sec-index">SECTION 02</span>
+          <h2 class="bp-sec-title">ENGINEERING MINDSET & SPECIFICATION</h2>
+          <p class="bp-sec-subtitle">Bridging low-level signal processing hardware and high-throughput backend microservices.</p>
+        </div>
+
+        <div class="bp-about-grid">
+          <!-- Left: Dimensioned Photo Frame -->
+          <div class="bp-photo-frame">
+            <div class="bp-photo-dimension-x">WIDTH: 250mm · SCALE 1:1</div>
+            <div class="bp-photo-dimension-y">HEIGHT: 250mm · ELEVATION 0.0</div>
+            <img src="./assets/profile.png" alt="Balasubramanian G - Backend and AI Systems Engineer" loading="lazy" />
+            <div class="bp-photo-caption">
+              <span>ID: BALA-G-2007</span>
+              <span>LOC: TAMIL NADU, IN</span>
+              <span>STATUS: 3RD YEAR B.TECH</span>
+            </div>
+          </div>
+
+          <!-- Right: Technical Narrative & Education -->
+          <div class="bp-about-narrative">
+            <div class="bp-spec-block">
+              <p>
+                I am a third-year <strong>Information Technology</strong> undergraduate at National Engineering College who views software not merely as code, but as interconnected technical systems. My passion lies in understanding how components interact across architectural layers — from low-level raw UART sensor packets and FFT algorithms up to distributed relational stores and vector search indices.
+              </p>
+            </div>
+
+            <div class="bp-spec-block">
+              <p>
+                In my backend engineering work, I address real transactional challenges: eliminating race conditions in concurrent auction bidding through Redis Lua scripts, scheduling asynchronous background workers with BullMQ, and designing decoupled microservices. In AI, I develop offline Retrieval-Augmented Generation (RAG) pipelines that enforce strict document-grounded context without external API leaks.
+              </p>
+            </div>
+
+            <!-- Verified Academic Qualifications -->
+            <div class="bp-edu-grid">
+              <div class="bp-edu-card">
+                <span class="bp-edu-tag">Undergraduate Degree</span>
+                <h3 class="bp-edu-degree">B.Tech in Information Technology</h3>
+                <p class="bp-edu-inst">National Engineering College, Kovilpatti</p>
+                <p class="bp-edu-meta mono">Aug 2024 – 2028 · CGPA 9.27</p>
+              </div>
+
+              <div class="bp-edu-card">
+                <span class="bp-edu-tag">Higher Secondary</span>
+                <h3 class="bp-edu-degree">Higher Secondary School Certificate</h3>
+                <p class="bp-edu-inst">Sivanthi Matric HSS, Cheranmahadevi</p>
+                <p class="bp-edu-meta mono">2022 – 2024 · Tamil Nadu State Board</p>
+              </div>
+
+              <div class="bp-edu-card">
+                <span class="bp-edu-tag">Specialized Training</span>
+                <h3 class="bp-edu-degree">Full-Stack Web Development</h3>
+                <p class="bp-edu-inst">Dr. Angela Yu · Udemy Certified</p>
+                <p class="bp-edu-meta mono">Node.js, Express, PostgreSQL, REST</p>
+              </div>
+
+              <div class="bp-edu-card">
+                <span class="bp-edu-tag">NPTEL Certification</span>
+                <h3 class="bp-edu-degree">Technical English for Engineers</h3>
+                <p class="bp-edu-inst">IIT Madras (NPTEL)</p>
+                <p class="bp-edu-meta mono">Certified Engineering Communication</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 03: FEATURED PROJECTS — ARCHITECTURAL SCHEMATICS
+         ========================================================================== -->
+    <section id="projects" class="bp-section">
+      <div class="bp-container">
+        <div class="bp-sec-header">
+          <span class="bp-sec-index">SECTION 03</span>
+          <h2 class="bp-sec-title">ENGINEERING CASE STUDIES & SCHEMATICS</h2>
+          <p class="bp-sec-subtitle">Detailed blueprints of verified software implementations, concurrency solutions, and data pipelines.</p>
+        </div>
+
+        <div class="bp-projects-list">
+
+          <!-- ====================================================================
+               PROJECT 01: BIDPULSE
+               ==================================================================== -->
+          <article class="bp-project-case" id="case-bidpulse">
+            <div class="bp-case-header">
+              <span class="bp-case-id mono">CASE STUDY 01 // MICROSERVICES & CONCURRENCY</span>
+              <div class="bp-case-status mono">
+                <span>DWG NO: BP-MS-2026</span>
+                <span class="bp-status-badge">COMPLETED ARCHITECTURE</span>
+              </div>
+            </div>
+
+            <div class="bp-case-body">
+              <!-- Left Info Column -->
+              <div class="bp-case-info">
+                <h3>BidPulse: Real-Time Auction Platform</h3>
+                <p class="bp-case-tagline">Autonomous Microservices · Atomic Concurrency via Redis Lua · WebSocket Push</p>
+
+                <div class="bp-case-problem-box">
+                  <div class="bp-box-label mono">ENGINEERING CHALLENGE: HIGH-CONCURRENCY RACE CONDITIONS</div>
+                  <p>When multiple users bid concurrently within milliseconds, naive database queries produce dirty reads and lost updates. Relational locks at scale choke the throughput of active auctions.</p>
+                </div>
+
+                <p class="bp-case-desc">
+                  Engineered an atomic concurrency barrier using an in-memory <strong>Redis Lua script (EVALSHA)</strong>. The script checks seller-approved bidder sets and verifies that the incoming bid strictly exceeds the current high bid as a single atomic operation before committing to PostgreSQL. Split into independent <code>AuthService</code> and <code>BidService</code> communicating over HTTP.
+                </p>
+
+                <ul class="bp-case-features">
+                  <li><strong>Dual Autonomous Services:</strong> AuthService (:4000) for identity/OAuth and BidService (:3000) for domain logic.</li>
+                  <li><strong>Real-Time Broadcast:</strong> Socket.IO auction rooms push live price changes instantly without client polling.</li>
+                  <li><strong>Post-Sale Workflow:</strong> Mandatory courier/shipment tracking proof upload required within fixed windows.</li>
+                  <li><strong>Seller Reputation:</strong> Wilson score lower bound confidence rating prevents review skewing.</li>
+                  <li><strong>Test Payments:</strong> Integrated Razorpay test mode with HMAC-SHA256 signature verification.</li>
+                </ul>
+
+                <div class="bp-case-tech-stack">
+                  <span class="bp-tech-chip accent">Node.js</span>
+                  <span class="bp-tech-chip accent">Express</span>
+                  <span class="bp-tech-chip accent">PostgreSQL</span>
+                  <span class="bp-tech-chip accent">Redis (Lua Scripting)</span>
+                  <span class="bp-tech-chip">Socket.IO</span>
+                  <span class="bp-tech-chip">BullMQ</span>
+                  <span class="bp-tech-chip">Google OAuth2</span>
+                  <span class="bp-tech-chip">Razorpay (Test Mode)</span>
+                  <span class="bp-tech-chip">React / Vite</span>
+                </div>
+
+                <div class="bp-case-links">
+                  <button type="button" class="bp-btn bp-btn-primary" data-dossier="bidpulse">
+                    <span>INSPECT BLUEPRINT DOSSIER</span>
+                    <span class="mono">→</span>
+                  </button>
+                  <a href="https://github.com/Balasubramanian-2007/Bid-Pulse" target="_blank" rel="noopener noreferrer" class="bp-btn bp-btn-outline">
+                    <span>VIEW SOURCE REPO</span>
+                    <span class="mono">↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right Interactive SVG Architecture Diagram -->
+              <div class="bp-diagram-viewport">
+                <div class="bp-diagram-header">
+                  <span>SYSTEM SCHEMATIC: ATOMIC BID VALIDATION PIPELINE</span>
+                  <span>HOVER NODES TO INSPECT</span>
+                </div>
+
+                <!-- Custom SVG Diagram -->
+                <svg class="bp-svg-diagram" viewBox="0 0 540 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Background grid lines -->
+                  <path d="M 30 0 V 380 M 120 0 V 380 M 210 0 V 380 M 300 0 V 380 M 390 0 V 380 M 480 0 V 380" stroke="var(--bp-border)" stroke-width="0.5" stroke-dasharray="2 2" />
+                  <path d="M 0 50 H 540 M 0 130 H 540 M 0 210 H 540 M 0 290 H 540" stroke="var(--bp-border)" stroke-width="0.5" stroke-dasharray="2 2" />
+
+                  <!-- Flow Paths -->
+                  <!-- Client to Gateway -->
+                  <path class="bp-diagram-flow-line" d="M 100 80 H 180" stroke="var(--bp-cobalt)" stroke-width="2" />
+                  <!-- Gateway to BidService -->
+                  <path class="bp-diagram-flow-line" d="M 280 80 H 360" stroke="var(--bp-cobalt)" stroke-width="2" />
+                  <!-- BidService to Redis Lua -->
+                  <path class="bp-diagram-flow-line" d="M 430 115 V 190" stroke="var(--bp-signal-orange)" stroke-width="2" />
+                  <!-- Redis to Postgres -->
+                  <path class="bp-diagram-flow-line" d="M 430 250 V 310" stroke="var(--bp-cobalt)" stroke-width="2" />
+                  <!-- BidService to BullMQ & Socket -->
+                  <path class="bp-diagram-flow-line" d="M 360 95 L 250 200" stroke="var(--bp-cobalt)" stroke-width="1.5" />
+                  <path class="bp-diagram-flow-line" d="M 360 85 L 100 290" stroke="var(--bp-cobalt)" stroke-width="1.5" />
+
+                  <!-- Node: React Client -->
+                  <g class="bp-diagram-node" data-tooltip="React Single Page App: Dispatches bid requests via REST & maintains Socket.IO room subscriptions.">
+                    <rect x="20" y="55" width="90" height="50" rx="3" fill="var(--bp-paper-elevated)" stroke="var(--bp-border-heavy)" stroke-width="1.5"/>
+                    <text x="65" y="78" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="var(--bp-deep-blue)" text-anchor="middle">React SPA</text>
+                    <text x="65" y="94" font-family="Inter" font-size="9" fill="var(--bp-annotation)" text-anchor="middle">Bid UI / Hooks</text>
+                  </g>
+
+                  <!-- Node: API Gateway -->
+                  <g class="bp-diagram-node" data-tooltip="HTTP Proxy / Gateway: Directs token checks to AuthService (:4000) and bidding to BidService (:3000).">
+                    <rect x="180" y="55" width="100" height="50" rx="3" fill="var(--bp-paper-elevated)" stroke="var(--bp-border-heavy)" stroke-width="1.5"/>
+                    <text x="230" y="78" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="var(--bp-deep-blue)" text-anchor="middle">API Routing</text>
+                    <text x="230" y="94" font-family="Inter" font-size="9" fill="var(--bp-annotation)" text-anchor="middle">Port 3000 / 4000</text>
+                  </g>
+
+                  <!-- Node: BidService -->
+                  <g class="bp-diagram-node" data-tooltip="BidService core logic: Orchestrates auction workflows, approvals, and delegates validation to Redis.">
+                    <rect x="360" y="55" width="140" height="60" rx="3" fill="var(--bp-paper-elevated)" stroke="var(--bp-cobalt)" stroke-width="2"/>
+                    <text x="430" y="80" font-family="JetBrains Mono" font-size="12" font-weight="700" fill="var(--bp-cobalt)" text-anchor="middle">BidService</text>
+                    <text x="430" y="98" font-family="Inter" font-size="9" fill="var(--bp-annotation)" text-anchor="middle">Domain Orchestrator</text>
+                  </g>
+
+                  <!-- Node: Redis Lua Script (Atomic Lock) -->
+                  <g class="bp-diagram-node" data-tooltip="Redis Lua Barrier (EVALSHA): Single-threaded atomic evaluation of approved-bidder set & highest bid value. Zero race conditions.">
+                    <rect x="350" y="190" width="160" height="60" rx="3" fill="var(--bp-paper-card)" stroke="var(--bp-signal-orange)" stroke-width="2"/>
+                    <text x="430" y="215" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="var(--bp-signal-orange)" text-anchor="middle">Redis 7.x (Lua)</text>
+                    <text x="430" y="233" font-family="Inter" font-size="9" fill="var(--bp-ink)" text-anchor="middle">Atomic EVALSHA Check</text>
+                  </g>
+
+                  <!-- Node: PostgreSQL Relational ACID Store -->
+                  <g class="bp-diagram-node" data-tooltip="PostgreSQL: Commits validated bids, records audit timestamps, and computes Wilson-score ratings.">
+                    <rect x="360" y="310" width="140" height="50" rx="3" fill="var(--bp-paper-elevated)" stroke="var(--bp-border-heavy)" stroke-width="1.5"/>
+                    <text x="430" y="333" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="var(--bp-deep-blue)" text-anchor="middle">PostgreSQL</text>
+                    <text x="430" y="348" font-family="Inter" font-size="9" fill="var(--bp-annotation)" text-anchor="middle">ACID Relational Log</text>
+                  </g>
+
+                  <!-- Node: BullMQ Worker -->
+                  <g class="bp-diagram-node" data-tooltip="BullMQ + node-cron: Runs scheduled status changes (LIVE -> COMPLETED) and queues email alerts.">
+                    <rect x="180" y="200" width="110" height="50" rx="3" fill="var(--bp-paper-elevated)" stroke="var(--bp-border-heavy)" stroke-width="1.5"/>
+                    <text x="235" y="223" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="var(--bp-deep-blue)" text-anchor="middle">BullMQ Jobs</text>
+                    <text x="235" y="238" font-family="Inter" font-size="9" fill="var(--bp-annotation)" text-anchor="middle">Async Status Worker</text>
+                  </g>
+
+                  <!-- Node: Socket.IO Room Broadcast -->
+                  <g class="bp-diagram-node" data-tooltip="Socket.IO Broadcast: Publishes validated high bid to the room (auction_id) within milliseconds.">
+                    <rect x="20" y="290" width="130" height="50" rx="3" fill="var(--bp-paper-elevated)" stroke="var(--bp-cobalt)" stroke-width="1.5"/>
+                    <text x="85" y="313" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="var(--bp-cobalt)" text-anchor="middle">Socket.IO Push</text>
+                    <text x="85" y="328" font-family="Inter" font-size="9" fill="var(--bp-annotation)" text-anchor="middle">Room Broadcaster</text>
+                  </g>
+                </svg>
+
+                <div class="bp-diagram-caption" data-default="SCHEMA BP-01: Bid operations undergo single-threaded Redis Lua evaluation before relational commit, preventing simultaneous race conditions.">
+                  SCHEMA BP-01: Bid operations undergo single-threaded Redis Lua evaluation before relational commit, preventing simultaneous race conditions.
+                </div>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- ====================================================================
+               PROJECT 02: OFFLINE RAG
+               ==================================================================== -->
+          <article class="bp-project-case" id="case-rag">
+            <div class="bp-case-header">
+              <span class="bp-case-id mono">CASE STUDY 02 // AIR-GAPPED AI & VECTOR RETRIEVAL</span>
+              <div class="bp-case-status mono">
+                <span>DWG NO: RAG-VEC-2026</span>
+                <span class="bp-status-badge">COMPLETED ARCHITECTURE</span>
+              </div>
+            </div>
+
+            <div class="bp-case-body">
+              <!-- Left Info Column -->
+              <div class="bp-case-info">
+                <h3>Offline RAG System for Technical Documents</h3>
+                <p class="bp-case-tagline">Structure-Aware Chunking · Dense Semantic Embeddings · FAISS Vector Index</p>
+
+                <div class="bp-case-problem-box">
+                  <div class="bp-box-label mono">ENGINEERING CHALLENGE: AIR-GAPPED PRIVACY & HALLUCINATIONS</div>
+                  <p>Enterprise and defense technical documents cannot be dispatched to cloud APIs. Naive fixed-length character chunking fragments syntax, destroys tabular data, and generates hallucinations.</p>
+                </div>
+
+                <p class="bp-case-desc">
+                  Built a fully offline Retrieval-Augmented Generation engine powered by <strong>FastAPI, FAISS, and Sentence Transformers</strong>. The parser parses document structure (hierarchical headers and sections) before encoding into 384-dimensional dense vectors. Context injection forces local LLM inference to answer strictly from retrieved passages.
+                </p>
+
+                <ul class="bp-case-features">
+                  <li><strong>Zero Internet Dependency:</strong> Runs completely within closed, private network environments without external API costs.</li>
+                  <li><strong>Structure-Aware Chunking:</strong> Preserves section context from PDF/DOCX manuals rather than splitting on arbitrary word limits.</li>
+                  <li><strong>FAISS Vector Search:</strong> Millisecond L2 / cosine similarity retrieval across thousands of document chunks.</li>
+                  <li><strong>Strict Context Grounding:</strong> Injects top-k passages with explicit prompts to eliminate synthetic hallucinations.</li>
+                  <li><strong>REST Endpoints:</strong> Clean FastAPI interface for document ingestion, index recreation, and query responses.</li>
+                </ul>
+
+                <div class="bp-case-tech-stack">
+                  <span class="bp-tech-chip accent">Python</span>
+                  <span class="bp-tech-chip accent">FastAPI</span>
+                  <span class="bp-tech-chip accent">FAISS Index</span>
+                  <span class="bp-tech-chip accent">Sentence Transformers</span>
+                  <span class="bp-tech-chip">pypdfium2</span>
+                  <span class="bp-tech-chip">PostgreSQL / SQLite</span>
+                  <span class="bp-tech-chip">Local LLM</span>
+                </div>
+
+                <div class="bp-case-links">
+                  <button type="button" class="bp-btn bp-btn-primary" data-dossier="offline-rag">
+                    <span>INSPECT BLUEPRINT DOSSIER</span>
+                    <span class="mono">→</span>
+                  </button>
+                  <a href="https://github.com/Balasubramanian-2007/Offline_RAG" target="_blank" rel="noopener noreferrer" class="bp-btn bp-btn-outline">
+                    <span>VIEW SOURCE REPO</span>
+                    <span class="mono">↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right Interactive SVG Retrieval Pipeline -->
+              <div class="bp-diagram-viewport">
+                <div class="bp-diagram-header">
+                  <span>SYSTEM SCHEMATIC: AIR-GAPPED SEMANTIC RETRIEVAL FLOW</span>
+                  <span>HOVER NODES TO INSPECT</span>
+                </div>
+
+                <svg class="bp-svg-diagram" viewBox="0 0 540 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Flow path -->
+                  <path class="bp-diagram-flow-line" d="M 120 70 H 220" stroke="var(--bp-cobalt)" stroke-width="2" />
+                  <path class="bp-diagram-flow-line" d="M 320 70 H 400" stroke="var(--bp-cobalt)" stroke-width="2" />
+                  <path class="bp-diagram-flow-line" d="M 450 100 V 180" stroke="var(--bp-cobalt)" stroke-width="2" />
+                  <path class="bp-diagram-flow-line" d="M 400 210 H 300" stroke="var(--bp-signal-orange)" stroke-width="2" />
+                  <path class="bp-diagram-flow-line" d="M 200 210 H 120" stroke="var(--bp-signal-orange)" stroke-width="2" />
+                  <path class="bp-diagram-flow-line" d="M 70 240 V 310" stroke="var(--bp-cobalt)" stroke-width="2" />
+                  <path class="bp-diagram-flow-line" d="M 120 335 H 380" stroke="var(--bp-cobalt)" stroke-width="2" />
+
+                  <!-- Nodes -->
+                  <g class="bp-diagram-node" data-tooltip="PDF/DOCX Document Ingestion: Extracts raw text and preserves outline metadata.">
+                    <rect x="20" y="45" width="100" height="50" rx="3" fill="var(--bp-paper-elevated)" stroke="var(--bp-border-heavy)" stroke-width="1.5"/>
+                    <text x="70" y="68" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="var(--bp-deep-blue)" text-anchor="middle">Tech Docs</text>
+                    <text x="70" y="84" font-family="Inter" font-size="9" fill="var(--bp-annotation)" text-anchor="middle">PDF / DOCX</text>
+                  </g>
+
+                  <g class="bp-diagram-node" data-tooltip="Heading-Aware Chunking: Partitions text based on document titles and logical sections.">
+                    <rect x="220" y="45" width="100" height="50" rx="3" fill="var(--bp-paper-elevated)" stroke="var(--bp-border-heavy)" stroke-width="1.5"/>
+                    <text x="270" y="68" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="var(--bp-deep-blue)" text-anchor="middle">Chunker</text>
+                    <text x="270" y="84" font-family="Inter" font-size="9" fill="var(--bp-annotation)" text-anchor="middle">Heading Aware</text>
+                  </g>
+
+                  <g class="bp-diagram-node" data-tooltip="Sentence Transformers: Converts passages into 384-dimensional dense mathematical embeddings.">
+                    <rect x="400" y="45" width="110" height="55" rx="3" fill="var(--bp-paper-card)" stroke="var(--bp-cobalt)" stroke-width="2"/>
+                    <text x="455" y="70" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="var(--bp-cobalt)" text-anchor="middle">MiniLM-L6</text>
+                    <text x="455" y="88" font-family="Inter" font-size="9" fill="var(--bp-ink)" text-anchor="middle">Vector Embedder</text>
+                  </g>
+
+                  <g class="bp-diagram-node" data-tooltip="FAISS Vector Index: Performs fast similarity search against stored dense embeddings.">
+                    <rect x="400" y="180" width="110" height="55" rx="3" fill="var(--bp-paper-elevated)" stroke="var(--bp-signal-orange)" stroke-width="2"/>
+                    <text x="455" y="205" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="var(--bp-signal-orange)" text-anchor="middle">FAISS Index</text>
+                    <text x="455" y="222" font-family="Inter" font-size="9" fill="var(--bp-ink)" text-anchor="middle">Cosine / L2 Store</text>
+                  </g>
+
+                  <g class="bp-diagram-node" data-tooltip="User Technical Query: Evaluated and embedded using the same Sentence Transformer model.">
+                    <rect x="200" y="185" width="100" height="50" rx="3" fill="var(--bp-paper-elevated)" stroke="var(--bp-border-heavy)" stroke-width="1.5"/>
+                    <text x="250" y="208" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="var(--bp-deep-blue)" text-anchor="middle">User Query</text>
+                    <text x="250" y="224" font-family="Inter" font-size="9" fill="var(--bp-annotation)" text-anchor="middle">Search Vector</text>
+                  </g>
+
+                  <g class="bp-diagram-node" data-tooltip="Top-K Relevant Passages: Extracted based on vector cosine proximity.">
+                    <rect x="20" y="185" width="100" height="50" rx="3" fill="var(--bp-paper-elevated)" stroke="var(--bp-border-heavy)" stroke-width="1.5"/>
+                    <text x="70" y="208" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="var(--bp-deep-blue)" text-anchor="middle">Top-K Context</text>
+                    <text x="70" y="224" font-family="Inter" font-size="9" fill="var(--bp-annotation)" text-anchor="middle">Grounded Extract</text>
+                  </g>
+
+                  <g class="bp-diagram-node" data-tooltip="Local LLM Inference: Qwen2-1.5B synthesized prompt strictly bounded to retrieved technical passages.">
+                    <rect x="20" y="310" width="100" height="50" rx="3" fill="var(--bp-paper-card)" stroke="var(--bp-cobalt)" stroke-width="1.5"/>
+                    <text x="70" y="333" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="var(--bp-cobalt)" text-anchor="middle">Local LLM</text>
+                    <text x="70" y="348" font-family="Inter" font-size="9" fill="var(--bp-annotation)" text-anchor="middle">Qwen2-1.5B</text>
+                  </g>
+
+                  <g class="bp-diagram-node" data-tooltip="Verified Context Answer: Zero external cloud transit, zero hallucination.">
+                    <rect x="380" y="310" width="140" height="50" rx="3" fill="var(--bp-paper-elevated)" stroke="var(--bp-border-heavy)" stroke-width="1.5"/>
+                    <text x="450" y="333" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="var(--bp-deep-blue)" text-anchor="middle">Verified Answer</text>
+                    <text x="450" y="348" font-family="Inter" font-size="9" fill="var(--bp-annotation)" text-anchor="middle">REST Output</text>
+                  </g>
+                </svg>
+
+                <div class="bp-diagram-caption" data-default="SCHEMA RAG-02: Document ingestion, hierarchical chunking, dense embedding, and vector similarity pipeline running completely air-gapped.">
+                  SCHEMA RAG-02: Document ingestion, hierarchical chunking, dense embedding, and vector similarity pipeline running completely air-gapped.
+                </div>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- ====================================================================
+               PROJECT 03: PRODUCT PRICE TRACKER & NOTIFIER
+               ==================================================================== -->
+          <article class="bp-project-case" id="case-tracker">
+            <div class="bp-case-header">
+              <span class="bp-case-id mono">CASE STUDY 03 // BACKGROUND DAEMONS & PERSISTENCE</span>
+              <div class="bp-case-status mono">
+                <span>DWG NO: PPT-JOB-2025</span>
+                <span class="bp-status-badge">COMPLETED ARCHITECTURE</span>
+              </div>
+            </div>
+
+            <div class="bp-case-body">
+              <div class="bp-case-info">
+                <h3>Product Price Tracker & Automated Notifier</h3>
+                <p class="bp-case-tagline">Scheduled Cron Daemons · E-commerce Price Polling · PostgreSQL Relational History</p>
+
+                <div class="bp-case-problem-box">
+                  <div class="bp-box-label mono">ENGINEERING CHALLENGE: PERSISTENT DELTA MONITORING WITHOUT BLOCKS</div>
+                  <p>Repetitive automated web scraping can hang the event loop if network latency spikes, while naive email dispatch can spam users or get rate-limited by SMTP servers.</p>
+                </div>
+
+                <p class="bp-case-desc">
+                  Architected a backend monitoring daemon in <strong>Node.js and PostgreSQL</strong>. A scheduled <code>node-cron</code> job periodically executes throttled price scraping routines, persists chronological price points, and analyzes price deltas. If a drop triggers user alert thresholds, a decoupled Nodemailer pipeline fires notification sequences.
+                </p>
+
+                <ul class="bp-case-features">
+                  <li><strong>Cron Scheduling:</strong> Decoupled periodic polling routines that run non-blockingly in background worker processes.</li>
+                  <li><strong>Relational Price Log:</strong> PostgreSQL schema storing chronological price time-series linked to user subscriptions.</li>
+                  <li><strong>Delta Threshold Logic:</strong> Fires notifications only when price decreases pass configured alert parameters.</li>
+                  <li><strong>Automated Email Dispatch:</strong> Formatted alerts with unsubscribe tokens and historical trend summaries.</li>
+                </ul>
+
+                <div class="bp-case-tech-stack">
+                  <span class="bp-tech-chip accent">Node.js</span>
+                  <span class="bp-tech-chip accent">Express</span>
+                  <span class="bp-tech-chip accent">PostgreSQL</span>
+                  <span class="bp-tech-chip">node-cron</span>
+                  <span class="bp-tech-chip">Axios</span>
+                  <span class="bp-tech-chip">Nodemailer</span>
+                </div>
+
+                <div class="bp-case-links">
+                  <button type="button" class="bp-btn bp-btn-primary" data-dossier="price-tracker">
+                    <span>INSPECT BLUEPRINT DOSSIER</span>
+                    <span class="mono">→</span>
+                  </button>
+                  <a href="https://github.com/Balasubramanian-2007/Product-Price-Tracker-Notifier" target="_blank" rel="noopener noreferrer" class="bp-btn bp-btn-outline">
+                    <span>VIEW SOURCE REPO</span>
+                    <span class="mono">↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right Daemon Schematic -->
+              <div class="bp-diagram-viewport">
+                <div class="bp-diagram-header">
+                  <span>SYSTEM SCHEMATIC: POLLING DAEMON & DISPATCH PIPELINE</span>
+                  <span>HOVER NODES TO INSPECT</span>
+                </div>
+
+                <svg class="bp-svg-diagram" viewBox="0 0 560 410" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Blueprint Drafting Grid -->
+                  <path d="M 30 0 V 410 M 110 0 V 410 M 190 0 V 410 M 270 0 V 410 M 350 0 V 410 M 430 0 V 410 M 510 0 V 410" stroke="var(--bp-border)" stroke-width="0.5" stroke-dasharray="2 2" />
+                  <path d="M 0 45 H 560 M 0 140 H 560 M 0 240 H 560 M 0 345 H 560" stroke="var(--bp-border)" stroke-width="0.5" stroke-dasharray="2 2" />
+
+                  <!-- FLOW CONNECTORS -->
+                  <!-- Tier 1: User to Postgres -->
+                  <path class="bp-diagram-flow-line" d="M 125 45 H 160" stroke="var(--bp-cobalt)" stroke-width="1.8" />
+                  <!-- Tier 1: Cron to Postgres Read & Watchlist Query -->
+                  <path class="bp-diagram-flow-line" d="M 320 45 H 285" stroke="var(--bp-cobalt)" stroke-width="1.8" />
+                  <path class="bp-diagram-flow-line" d="M 425 45 H 455" stroke="var(--bp-cobalt)" stroke-width="1.8" />
+                  
+                  <!-- Vertical connector: Tier 1 to Tier 2 (Watchlist Query -> ZenRows API) -->
+                  <path class="bp-diagram-flow-line" d="M 500 68 V 115" stroke="var(--bp-signal-orange)" stroke-width="1.8" />
+                  
+                  <!-- Tier 2: ZenRows API to Parser to Sanitizer -->
+                  <path class="bp-diagram-flow-line" d="M 395 138 H 350" stroke="var(--bp-cobalt)" stroke-width="1.8" />
+                  <path class="bp-diagram-flow-line" d="M 215 138 H 170" stroke="var(--bp-cobalt)" stroke-width="1.8" />
+
+                  <!-- Vertical connector: Tier 2 to Tier 3 (Price Sanitizer -> Delta Check) -->
+                  <path class="bp-diagram-flow-line" d="M 90 162 V 215" stroke="var(--bp-cobalt)" stroke-width="1.8" />
+
+                  <!-- Tier 3 Decision Branches -->
+                  <!-- Branch NO: Price Unchanged / Higher (Silent Finish) -->
+                  <path class="bp-diagram-flow-line" d="M 165 240 H 220" stroke="var(--bp-annotation)" stroke-width="1.8" stroke-dasharray="4 3" />
+                  <!-- Branch YES: Price Dropped (Proceed to Row 4) -->
+                  <path class="bp-diagram-flow-line" d="M 90 266 V 320" stroke="#10B981" stroke-width="2" />
+                  <!-- Branch Exception: Scrape / Network Error catch -->
+                  <path class="bp-diagram-flow-line" d="M 465 162 V 215" stroke="var(--bp-signal-orange)" stroke-width="1.5" stroke-dasharray="3 3" />
+
+                  <!-- Tier 4: Update Postgres -> Email Lookup -> Nodemailer -> Inbox Alert -->
+                  <path class="bp-diagram-flow-line" d="M 165 344 H 200" stroke="var(--bp-cobalt)" stroke-width="1.8" />
+                  <path class="bp-diagram-flow-line" d="M 320 344 H 355" stroke="var(--bp-cobalt)" stroke-width="1.8" />
+                  <path class="bp-diagram-flow-line" d="M 470 344 H 495" stroke="var(--bp-cobalt)" stroke-width="1.8" />
+
+                  <!-- Branch Labels -->
+                  <text x="175" y="233" class="bp-branch-label no">NO (STABLE)</text>
+                  <text x="96" y="295" class="bp-branch-label yes">YES (PRICE DROP)</text>
+                  <text x="472" y="195" class="bp-branch-label err">ON ERROR</text>
+
+                  <!-- ==========================================
+                       TIER 1 NODES: INTAKE & SCHEDULING
+                       ========================================== -->
+                  <!-- Node 1: User & Product Setup -->
+                  <g class="bp-diagram-node" tabindex="0" role="graphics-symbol" aria-label="User Product Setup" data-tooltip="POST /notify: User subscribes to product URL with initial baseline price and user identity.">
+                    <rect x="15" y="22" width="110" height="46" rx="3" fill="var(--bp-paper-elevated)" stroke="var(--bp-border-heavy)" stroke-width="1.5"/>
+                    <text x="70" y="42" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="var(--bp-deep-blue)" text-anchor="middle">Product Setup</text>
+                    <text x="70" y="56" font-family="Inter" font-size="8.5" fill="var(--bp-annotation)" text-anchor="middle">POST /notify</text>
+                  </g>
+
+                  <!-- Node 2: PostgreSQL notificationTable -->
+                  <g class="bp-diagram-node" tabindex="0" role="graphics-symbol" aria-label="PostgreSQL Database" data-tooltip="PostgreSQL: Stores relational tables (notificationTable &amp; userTable) tracking user_id, product_url, and old_price.">
+                    <rect x="160" y="22" width="125" height="46" rx="3" fill="var(--bp-paper-card)" stroke="var(--bp-cobalt)" stroke-width="2"/>
+                    <text x="222" y="42" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="var(--bp-cobalt)" text-anchor="middle">PostgreSQL DB</text>
+                    <text x="222" y="56" font-family="Inter" font-size="8.5" fill="var(--bp-ink)" text-anchor="middle">notificationTable</text>
+                  </g>
+
+                  <!-- Node 3: node-cron Scheduler -->
+                  <g class="bp-diagram-node" tabindex="0" role="graphics-symbol" aria-label="Cron Scheduler" data-tooltip="node-cron: Scheduled polling daemon (cron.schedule) initiates autonomous price evaluation cycles.">
+                    <rect x="320" y="22" width="105" height="46" rx="3" fill="var(--bp-paper-elevated)" stroke="var(--bp-border-heavy)" stroke-width="1.5"/>
+                    <text x="372" y="42" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="var(--bp-deep-blue)" text-anchor="middle">node-cron</text>
+                    <text x="372" y="56" font-family="Inter" font-size="8.5" fill="var(--bp-annotation)" text-anchor="middle">Interval Trigger</text>
+                  </g>
+
+                  <!-- Node 4: Active Watchlist Query -->
+                  <g class="bp-diagram-node" tabindex="0" role="graphics-symbol" aria-label="Watchlist Query" data-tooltip="Watchlist Query: SELECT user_id, product_url, old_price, product_name FROM notificationTable.">
+                    <rect x="455" y="22" width="90" height="46" rx="3" fill="var(--bp-paper-elevated)" stroke="var(--bp-border-heavy)" stroke-width="1.5"/>
+                    <text x="500" y="42" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="var(--bp-deep-blue)" text-anchor="middle">Active Query</text>
+                    <text x="500" y="56" font-family="Inter" font-size="8.5" fill="var(--bp-annotation)" text-anchor="middle">Read Watchlist</text>
+                  </g>
+
+                  <!-- ==========================================
+                       TIER 2 NODES: ANTI-BOT SCRAPING & EXTRACTION
+                       ========================================== -->
+                  <!-- Node 5: ZenRows Scraping Proxy (External) -->
+                  <g class="bp-diagram-node external" tabindex="0" role="graphics-symbol" aria-label="ZenRows API Proxy" data-tooltip="ZenRows API (External): api.zenrows.com/v1/ GET request with autoparse:true to bypass anti-bot, Cloudflare, and Captchas.">
+                    <rect x="395" y="115" width="150" height="48" rx="3" fill="var(--bp-paper-card)" stroke="var(--bp-signal-orange)" stroke-width="2"/>
+                    <text x="470" y="136" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="var(--bp-signal-orange)" text-anchor="middle">ZenRows API</text>
+                    <text x="470" y="151" font-family="Inter" font-size="8.5" fill="var(--bp-ink)" text-anchor="middle">Anti-Bot Proxy</text>
+                  </g>
+
+                  <!-- Node 6: Response Payload Parser -->
+                  <g class="bp-diagram-node" tabindex="0" role="graphics-symbol" aria-label="Response Parser" data-tooltip="Axios Response Parser: Deserializes JSON payload containing autoparsed price, product title, and out_of_stock state.">
+                    <rect x="215" y="115" width="135" height="48" rx="3" fill="var(--bp-paper-elevated)" stroke="var(--bp-border-heavy)" stroke-width="1.5"/>
+                    <text x="282" y="136" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="var(--bp-deep-blue)" text-anchor="middle">Response Parser</text>
+                    <text x="282" y="151" font-family="Inter" font-size="8.5" fill="var(--bp-annotation)" text-anchor="middle">Axios data.price</text>
+                  </g>
+
+                  <!-- Node 7: Price Sanitizer & Parser -->
+                  <g class="bp-diagram-node" tabindex="0" role="graphics-symbol" aria-label="Price Sanitizer" data-tooltip="Price Sanitizer: Executes parseInt(data.price) to validate numeric currency format before comparison.">
+                    <rect x="15" y="115" width="155" height="48" rx="3" fill="var(--bp-paper-elevated)" stroke="var(--bp-border-heavy)" stroke-width="1.5"/>
+                    <text x="92" y="136" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="var(--bp-deep-blue)" text-anchor="middle">Price Extractor</text>
+                    <text x="92" y="151" font-family="Inter" font-size="8.5" fill="var(--bp-annotation)" text-anchor="middle">parseInt(newPrice)</text>
+                  </g>
+
+                  <!-- ==========================================
+                       TIER 3 NODES: DELTA LOGIC & DECISIONS
+                       ========================================== -->
+                  <!-- Node 8: Decision Diamond (Price Drop Check) -->
+                  <g class="bp-diagram-node decision" tabindex="0" role="graphics-symbol" aria-label="Price Drop Decision" data-tooltip="Decision Logic: Compares newPrice &lt; parseInt(old_price). Branches to DB update &amp; alert if dropped; else skips.">
+                    <rect x="15" y="215" width="150" height="52" rx="3" fill="var(--bp-paper-card)" stroke="var(--bp-signal-orange)" stroke-width="2"/>
+                    <text x="90" y="238" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="var(--bp-signal-orange)" text-anchor="middle">newPrice &lt; old_price ?</text>
+                    <text x="90" y="254" font-family="Inter" font-size="8.5" fill="var(--bp-ink)" text-anchor="middle">Delta Decision Check</text>
+                  </g>
+
+                  <!-- Node 9: Silent Finish (No Drop) -->
+                  <g class="bp-diagram-node" tabindex="0" role="graphics-symbol" aria-label="Silent Finish" data-tooltip="Silent Completion: If price is equal or higher, the daemon logs status and finishes cycle without sending email spam.">
+                    <rect x="220" y="215" width="150" height="52" rx="3" fill="var(--bp-paper-elevated)" stroke="var(--bp-border)" stroke-width="1.5" stroke-dasharray="3 3"/>
+                    <text x="295" y="238" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="var(--bp-annotation)" text-anchor="middle">Silent Complete</text>
+                    <text x="295" y="254" font-family="Inter" font-size="8.5" fill="var(--bp-annotation)" text-anchor="middle">No Price Drop · Skip</text>
+                  </g>
+
+                  <!-- Node 9B: Exception Catch Logger -->
+                  <g class="bp-diagram-node" tabindex="0" role="graphics-symbol" aria-label="Exception Catch" data-tooltip="Exception Handler: try/catch block intercepts scraping timeouts or 4xx/5xx HTTP errors gracefully, preventing crash.">
+                    <rect x="395" y="215" width="150" height="52" rx="3" fill="var(--bp-paper-elevated)" stroke="var(--bp-signal-orange)" stroke-width="1.5" stroke-dasharray="3 3"/>
+                    <text x="470" y="238" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="var(--bp-signal-orange)" text-anchor="middle">Exception Catch</text>
+                    <text x="470" y="254" font-family="Inter" font-size="8.5" fill="var(--bp-annotation)" text-anchor="middle">Log &amp; Resume Next</text>
+                  </g>
+
+                  <!-- ==========================================
+                       TIER 4 NODES: PERSISTENCE & DISPATCH
+                       ========================================== -->
+                  <!-- Node 10: PostgreSQL Update -->
+                  <g class="bp-diagram-node" tabindex="0" role="graphics-symbol" aria-label="Update PostgreSQL" data-tooltip="UPDATE notificationTable SET old_price=$1, datex=$2 WHERE user_id=$3: Persists the new lower benchmark price.">
+                    <rect x="15" y="320" width="150" height="48" rx="3" fill="var(--bp-paper-card)" stroke="var(--bp-cobalt)" stroke-width="2"/>
+                    <text x="90" y="341" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="var(--bp-cobalt)" text-anchor="middle">Update Postgres</text>
+                    <text x="90" y="356" font-family="Inter" font-size="8.5" fill="var(--bp-ink)" text-anchor="middle">SET old_price, datex</text>
+                  </g>
+
+                  <!-- Node 11: User Email Resolution -->
+                  <g class="bp-diagram-node" tabindex="0" role="graphics-symbol" aria-label="User Email Lookup" data-tooltip="SELECT mail_id FROM userTable WHERE user_id=$1: Resolves recipient destination email address.">
+                    <rect x="200" y="320" width="120" height="48" rx="3" fill="var(--bp-paper-elevated)" stroke="var(--bp-border-heavy)" stroke-width="1.5"/>
+                    <text x="260" y="341" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="var(--bp-deep-blue)" text-anchor="middle">Email Lookup</text>
+                    <text x="260" y="356" font-family="Inter" font-size="8.5" fill="var(--bp-annotation)" text-anchor="middle">userTable.mail_id</text>
+                  </g>
+
+                  <!-- Node 12: Nodemailer Dispatcher (External SMTP) -->
+                  <g class="bp-diagram-node external" tabindex="0" role="graphics-symbol" aria-label="Nodemailer SMTP" data-tooltip="Nodemailer: Creates Gmail SMTP transporter with EMAIL_APP_CODE, constructing formatted buy-link alert text.">
+                    <rect x="355" y="320" width="115" height="48" rx="3" fill="var(--bp-paper-card)" stroke="var(--bp-cobalt)" stroke-width="2"/>
+                    <text x="412" y="341" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="var(--bp-cobalt)" text-anchor="middle">Nodemailer</text>
+                    <text x="412" y="356" font-family="Inter" font-size="8.5" fill="var(--bp-ink)" text-anchor="middle">Gmail SMTP Transport</text>
+                  </g>
+
+                  <!-- Node 13: Inbox Alert -->
+                  <g class="bp-diagram-node" tabindex="0" role="graphics-symbol" aria-label="User Inbox Alert" data-tooltip="Recipient Inbox: Receives Price Dropped (Alert) notification with product title, buy link, and price delta.">
+                    <rect x="495" y="320" width="50" height="48" rx="3" fill="var(--bp-paper-elevated)" stroke="var(--bp-border-heavy)" stroke-width="1.5"/>
+                    <text x="520" y="341" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="var(--bp-deep-blue)" text-anchor="middle">Inbox</text>
+                    <text x="520" y="356" font-family="Inter" font-size="8.5" fill="var(--bp-annotation)" text-anchor="middle">Alert 📢</text>
+                  </g>
+                </svg>
+
+                <div class="bp-diagram-caption" data-default="SCHEMA PPT-03: End-to-end cron polling cycle: Watchlist ingestion → ZenRows anti-bot scraping → parseInt price extraction → Delta condition branch → PostgreSQL persistence &amp; Nodemailer SMTP dispatch.">
+                  SCHEMA PPT-03: End-to-end cron polling cycle: Watchlist ingestion → ZenRows anti-bot scraping → parseInt price extraction → Delta condition branch → PostgreSQL persistence &amp; Nodemailer SMTP dispatch.
+                </div>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- ====================================================================
+               PROJECT 04: mmWAVE RADAR PERCEPTION
+               ==================================================================== -->
+          <article class="bp-project-case" id="case-radar">
+            <div class="bp-case-header">
+              <span class="bp-case-id mono">CASE STUDY 04 // SENSOR PERCEPTION & SIGNAL PROCESSING</span>
+              <div class="bp-case-status mono">
+                <span>DWG NO: MMW-RAD-2026</span>
+                <span class="bp-status-badge">MISTRAL SOLUTIONS INTERNSHIP</span>
+              </div>
+            </div>
+
+            <div class="bp-case-body">
+              <div class="bp-case-info">
+                <h3>TI AWR1843 mmWave Radar Aerial Classification</h3>
+                <p class="bp-case-tagline">77GHz FMCW Radar · Range/Doppler FFT · STFT Micro-Doppler Spectrograms</p>
+
+                <div class="bp-case-problem-box">
+                  <div class="bp-box-label mono">ENGINEERING CHALLENGE: DRONE VS BIRD LOW-ALTITUDE DISCRIMINATION</div>
+                  <p>In perimeter surveillance, optical sensors fail in low light or fog. Radar backscatter from small drones and birds shares similar radar cross-sections (RCS), requiring micro-Doppler spectral analysis.</p>
+                </div>
+
+                <p class="bp-case-desc">
+                  Internship research at <strong>Mistral Solutions</strong>. Configured and flashed Texas Instruments AWR1843 77GHz mmWave hardware. Parsed raw UART ADC frames, executed 2D FFTs (Range and Doppler), and computed <strong>Short-Time Fourier Transform (STFT)</strong> spectrograms to isolate micro-Doppler blade rotation signatures. Trained a Random Forest baseline achieving <strong>92.9% accuracy and 0.974 ROC-AUC</strong>, transitioning toward CNN and CNN-LSTM architectures.
+                </p>
+
+                <ul class="bp-case-features">
+                  <li><strong>Hardware Profile Configuration:</strong> Texas Instruments AWR1843 FMCW chirp configuration and UniFlash firmware deployment.</li>
+                  <li><strong>UART / TLV Parser:</strong> Ingested high-throughput binary frames containing detected point clouds and raw ADC samples.</li>
+                  <li><strong>Signal Processing Pipeline:</strong> Range-FFT, Doppler-FFT, CA-CFAR target detection, and STFT spectrogram extraction.</li>
+                  <li><strong>Machine Learning Baseline:</strong> 92.9% classification accuracy with 0.974 ROC-AUC discriminating rotating drone blades from bird wing flap kinematics.</li>
+                </ul>
+
+                <div class="bp-case-tech-stack">
+                  <span class="bp-tech-chip accent">TI AWR1843</span>
+                  <span class="bp-tech-chip accent">77GHz FMCW</span>
+                  <span class="bp-tech-chip accent">Python</span>
+                  <span class="bp-tech-chip accent">Signal Processing (FFT/STFT)</span>
+                  <span class="bp-tech-chip">scikit-learn (Random Forest)</span>
+                  <span class="bp-tech-chip">NumPy / SciPy</span>
+                  <span class="bp-tech-chip">UART / TLV</span>
+                </div>
+
+                <div class="bp-case-links">
+                  <button type="button" class="bp-btn bp-btn-primary" data-dossier="radar-sensing">
+                    <span>INSPECT BLUEPRINT DOSSIER</span>
+                    <span class="mono">→</span>
+                  </button>
+                  <a href="https://github.com/Balasubramanian-2007/Drone-or-Not-classification-using-mmwave-radar" target="_blank" rel="noopener noreferrer" class="bp-btn bp-btn-outline">
+                    <span>VIEW SOURCE REPO</span>
+                    <span class="mono">↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right Authentic Diagram Viewport -->
+              <div class="bp-diagram-viewport">
+                <div class="bp-diagram-header">
+                  <span>AUTHENTIC PIPELINE ARTIFACT: TI AWR1843 RADAR ADC TO PREDICTION</span>
+                  <span>FROM PROJECT REPOSITORY</span>
+                </div>
+
+                <img src="./assets/radar_pipeline.png" alt="mmWave Radar ADC to Prediction Pipeline Diagram" style="width:100%; height:auto; display:block; border:1px solid var(--bp-border);" loading="lazy" />
+
+                <div class="bp-diagram-caption">
+                  ARTIFACT RAD-04: Authentic processing pipeline from raw ADC radar frames through Range/Doppler FFT, CFAR, STFT micro-Doppler spectrograms, to ML classification.
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Additional Documented Repositories Grid -->
+        <div class="bp-secondary-projects">
+          <h3 class="bp-sec-subheading mono">ADDITIONAL VERIFIED REPOSITORIES & SYSTEMS</h3>
+          <div class="bp-sub-grid">
+            
+            <div class="bp-sub-card">
+              <div>
+                <span class="mono" style="font-size:0.75rem; color:var(--bp-cobalt);">REPO 05 // FULL-STACK</span>
+                <h4>Venue Booking System</h4>
+                <p>Conflict-free slot booking backend for institutional venues. Implements EJS, Node.js, Express, PostgreSQL, and automated confirmation emails.</p>
+              </div>
+              <a href="https://github.com/Balasubramanian-2007/Venue-Booking-system" target="_blank" rel="noopener noreferrer" class="mono" style="font-size:0.8rem; font-weight:600;">
+                VIEW ON GITHUB ↗
+              </a>
+            </div>
+
+            <div class="bp-sub-card">
+              <div>
+                <span class="mono" style="font-size:0.75rem; color:var(--bp-cobalt);">REPO 06 // EMBEDDED / TS</span>
+                <h4>L-ADAS Perception Logic</h4>
+                <p>Advanced Driver Assistance System logic and road entity calculation modules implemented in TypeScript.</p>
+              </div>
+              <a href="https://github.com/Balasubramanian-2007/L-ADAS" target="_blank" rel="noopener noreferrer" class="mono" style="font-size:0.8rem; font-weight:600;">
+                VIEW ON GITHUB ↗
+              </a>
+            </div>
+
+            <div class="bp-sub-card">
+              <div>
+                <span class="mono" style="font-size:0.75rem; color:var(--bp-cobalt);">REPO 07 // DATA RETRIEVAL</span>
+                <h4>Stock Pulse</h4>
+                <p>Python financial monitoring script querying live stock APIs, trend analysis, and historical price observation logging.</p>
+              </div>
+              <a href="https://github.com/Balasubramanian-2007/Stock-Pulse" target="_blank" rel="noopener noreferrer" class="mono" style="font-size:0.8rem; font-weight:600;">
+                VIEW ON GITHUB ↗
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 04: TECHNICAL FOCUS — SUBSYSTEM MATRIX
+         ========================================================================== -->
+    <section id="skills" class="bp-section">
+      <div class="bp-container">
+        <div class="bp-sec-header">
+          <span class="bp-sec-index">SECTION 04</span>
+          <h2 class="bp-sec-title">TECHNICAL SUBSYSTEM MATRIX</h2>
+          <p class="bp-sec-subtitle">Verified proficiencies mapped by architectural domain. Zero arbitrary percentage bars.</p>
+        </div>
+
+        <div class="bp-skills-matrix">
+          
+          <div class="bp-domain-card">
+            <h3 class="bp-domain-title">
+              <span class="mono">[01]</span> PROGRAMMING LANGUAGES
+            </h3>
+            <div class="bp-skills-tags">
+              <span class="bp-spec-chip highlight">C++</span>
+              <span class="bp-spec-chip highlight">Python</span>
+              <span class="bp-spec-chip highlight">JavaScript (ES6+)</span>
+              <span class="bp-spec-chip">Java</span>
+              <span class="bp-spec-chip">SQL / PL-SQL</span>
+            </div>
+          </div>
+
+          <div class="bp-domain-card">
+            <h3 class="bp-domain-title">
+              <span class="mono">[02]</span> BACKEND & MICROSERVICES
+            </h3>
+            <div class="bp-skills-tags">
+              <span class="bp-spec-chip highlight">Node.js</span>
+              <span class="bp-spec-chip highlight">Express.js</span>
+              <span class="bp-spec-chip highlight">FastAPI</span>
+              <span class="bp-spec-chip">Socket.IO (WebSockets)</span>
+              <span class="bp-spec-chip">RESTful API Design</span>
+              <span class="bp-spec-chip">JWT & OAuth2</span>
+              <span class="bp-spec-chip">BullMQ</span>
+            </div>
+          </div>
+
+          <div class="bp-domain-card">
+            <h3 class="bp-domain-title">
+              <span class="mono">[03]</span> DATABASES & CACHING
+            </h3>
+            <div class="bp-skills-tags">
+              <span class="bp-spec-chip highlight">PostgreSQL</span>
+              <span class="bp-spec-chip highlight">Redis (Lua Scripting)</span>
+              <span class="bp-spec-chip">SQLite</span>
+              <span class="bp-spec-chip">Oracle SQL</span>
+              <span class="bp-spec-chip">Schema Normalization</span>
+            </div>
+          </div>
+
+          <div class="bp-domain-card">
+            <h3 class="bp-domain-title">
+              <span class="mono">[04]</span> AI & INFORMATION RETRIEVAL
+            </h3>
+            <div class="bp-skills-tags">
+              <span class="bp-spec-chip highlight">FAISS (Vector Search)</span>
+              <span class="bp-spec-chip highlight">Sentence Transformers</span>
+              <span class="bp-spec-chip">Offline RAG Systems</span>
+              <span class="bp-spec-chip">scikit-learn</span>
+              <span class="bp-spec-chip">Random Forest Classifier</span>
+            </div>
+          </div>
+
+          <div class="bp-domain-card">
+            <h3 class="bp-domain-title">
+              <span class="mono">[05]</span> RADAR & SIGNAL PROCESSING
+            </h3>
+            <div class="bp-skills-tags">
+              <span class="bp-spec-chip highlight">TI AWR1843 (77GHz)</span>
+              <span class="bp-spec-chip highlight">FMCW Radar</span>
+              <span class="bp-spec-chip">Range-FFT & Doppler-FFT</span>
+              <span class="bp-spec-chip">CA-CFAR Filtering</span>
+              <span class="bp-spec-chip">STFT Micro-Doppler</span>
+              <span class="bp-spec-chip">UART TLV Frame Parsing</span>
+            </div>
+          </div>
+
+          <div class="bp-domain-card">
+            <h3 class="bp-domain-title">
+              <span class="mono">[06]</span> TOOLS & INFRASTRUCTURE
+            </h3>
+            <div class="bp-skills-tags">
+              <span class="bp-spec-chip">Git & GitHub</span>
+              <span class="bp-spec-chip">Linux / Bash</span>
+              <span class="bp-spec-chip">VS Code</span>
+              <span class="bp-spec-chip">TI UniFlash</span>
+              <span class="bp-spec-chip">Google Cloud Platform</span>
+              <span class="bp-spec-chip">Postman</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 05: LOGBOOK — EXPERIENCE & APPOINTMENTS
+         ========================================================================== -->
+    <section id="experience" class="bp-section">
+      <div class="bp-container">
+        <div class="bp-sec-header">
+          <span class="bp-sec-index">SECTION 05</span>
+          <h2 class="bp-sec-title">ENGINEERING LOGBOOK & EXPERIENCE</h2>
+          <p class="bp-sec-subtitle">Chronological record of verified industry appointments and responsibilities.</p>
+        </div>
+
+        <div class="bp-logbook-feed">
+          
+          <div class="bp-log-item">
+            <div class="bp-log-header">
+              <div>
+                <h3 class="bp-log-role">mmWave Radar Engineering Intern</h3>
+                <p class="bp-log-company">Mistral Solutions · Kovilpatti, India</p>
+              </div>
+              <span class="bp-log-date mono">DEC 2025 – PRESENT</span>
+            </div>
+
+            <ul class="bp-log-bullets">
+              <li>Configured and deployed firmware profiles to Texas Instruments AWR1843 77GHz FMCW radar hardware using TI UniFlash.</li>
+              <li>Engineered Python data acquisition routines to read UART serial streams and decode Tag-Length-Value (TLV) payload frames in real time.</li>
+              <li>Implemented digital signal processing algorithms including Range-FFT, Doppler-FFT, and CA-CFAR for noise and clutter reduction.</li>
+              <li>Generated Short-Time Fourier Transform (STFT) micro-Doppler spectrograms to capture rotor rotation dynamics for drone vs. bird classification.</li>
+              <li>Trained a Random Forest baseline achieving 92.9% accuracy and 0.974 ROC-AUC, advancing toward CNN-LSTM spatio-temporal architectures.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 06: METRICS — TELEMETRY & ACHIEVEMENTS
+         ========================================================================== -->
+    <section id="metrics" class="bp-section">
+      <div class="bp-container">
+        <div class="bp-sec-header">
+          <span class="bp-sec-index">SECTION 06</span>
+          <h2 class="bp-sec-title">CODING METRICS & COMPETITIVE HONORS</h2>
+          <p class="bp-sec-subtitle">Verified algorithmic problem-solving records and technical competition wins.</p>
+        </div>
+
+        <div class="bp-metrics-grid">
+          
+          <!-- Coding Records -->
+          <div class="bp-metrics-card">
+            <div class="bp-metrics-card-header">
+              <span>ALGORITHMIC PLATFORMS</span>
+              <span class="mono" id="metricsHeaderBadge" style="color:var(--bp-signal-orange);">228 VERIFIED (LEETCODE)</span>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:12px; flex-wrap:wrap; gap:6px;">
+              <h3 style="font-family:var(--font-editorial); font-size:1.3rem; color:var(--bp-deep-blue);">LeetCode Telemetry</h3>
+              <span class="mono" id="leetcodeVerifiedDate" style="font-size:0.75rem; color:var(--bp-annotation);">VERIFIED: OCT 18, 2026</span>
+            </div>
+            
+            <div class="bp-bars-group">
+              <div class="bp-bar-row">
+                <span>EASY</span>
+                <div class="bp-bar-track">
+                  <div class="bp-bar-fill easy" id="barFillEasy" style="width: 57.9%;"></div>
+                </div>
+                <span class="bp-bar-count mono" id="barCountEasy">132</span>
+              </div>
+              <div class="bp-bar-row">
+                <span>MEDIUM</span>
+                <div class="bp-bar-track">
+                  <div class="bp-bar-fill medium" id="barFillMedium" style="width: 36.8%;"></div>
+                </div>
+                <span class="bp-bar-count mono" id="barCountMedium">84</span>
+              </div>
+              <div class="bp-bar-row">
+                <span>HARD</span>
+                <div class="bp-bar-track">
+                  <div class="bp-bar-fill hard" id="barFillHard" style="width: 5.3%;"></div>
+                </div>
+                <span class="bp-bar-count mono" id="barCountHard">12</span>
+              </div>
+            </div>
+
+            <div style="margin-top:16px; padding-top:12px; border-top:1px dashed var(--bp-border); display:flex; flex-direction:column; gap:10px;">
+              <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px;">
+                <span class="mono" style="font-size:0.85rem;">LeetCode Unique Total: <strong id="leetcodeTotalDisplay">228 Unique Problems</strong></span>
+                <a id="leetcodeProfileLink" href="https://leetcode.com/u/BalasubramanianG/" target="_blank" rel="noopener noreferrer" class="mono" style="font-size:0.8rem; font-weight:700;">
+                  LEETCODE PROFILE ↗
+                </a>
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px;">
+                <span class="mono" style="font-size:0.85rem;">SkillRack Record: <span id="skillrackCountWrap"><span class="bp-unverified-tag" title="SkillRack requires college authentication to verify counts">Update required</span></span></span>
+                <a id="skillrackProfileLink" href="https://www.skillrack.com" target="_blank" rel="noopener noreferrer" class="mono" style="font-size:0.8rem; font-weight:700;">
+                  SKILLRACK ↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Honors & Awards -->
+          <div class="bp-metrics-card">
+            <div class="bp-metrics-card-header">
+              <span>HACKATHONS & COMPETITIONS</span>
+              <span class="mono">VERIFIED HONORS</span>
+            </div>
+
+            <div class="bp-achieve-list">
+              
+              <div class="bp-achieve-item">
+                <span class="bp-achieve-badge">WINNER</span>
+                <div class="bp-achieve-info">
+                  <h4>Thoothukudi Hackathon</h4>
+                  <p>Organized by Startup TN · Regional Innovation Competition</p>
+                </div>
+              </div>
+
+              <div class="bp-achieve-item">
+                <span class="bp-achieve-badge">FINALIST</span>
+                <div class="bp-achieve-info">
+                  <h4>Aerothon '26</h4>
+                  <p>IIIT Dharwad · National-level Aerospace & Sensing Challenge</p>
+                </div>
+              </div>
+
+              <div class="bp-achieve-item">
+                <span class="bp-achieve-badge">2ND PRIZE</span>
+                <div class="bp-achieve-info">
+                  <h4>Coding Contest — CSI Club</h4>
+                  <p>Computer Society of India · National Engineering College</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 07: DISPATCH — CONTACT & TRANSMISSION
+         ========================================================================== -->
+    <section id="contact" class="bp-section">
+      <div class="bp-container">
+        <div class="bp-contact-sheet">
+          <div class="bp-sec-index">SECTION 07 // DISPATCH TRANSMISSION</div>
+
+          <div class="bp-contact-grid">
+            <div>
+              <h2 class="bp-contact-statement">
+                Have an interesting problem to solve? Let's talk.
+              </h2>
+              <p style="font-size:1.05rem; color:var(--bp-ink-secondary); line-height:1.6; max-width:540px;">
+                I am actively seeking backend engineering and AI software engineer opportunities at product-driven engineering companies. Open to discussing scalable systems, microservices, and technical projects.
+              </p>
+
+              <div class="bp-contact-channels">
+                <a href="mailto:subramaniang172@gmail.com" class="bp-channel-link">
+                  <span>EMAIL DISPATCH: subramaniang172@gmail.com</span>
+                  <span>↗</span>
+                </a>
+                <a href="tel:+919345838578" class="bp-channel-link">
+                  <span>DIRECT LINE: +91 93458 38578</span>
+                  <span>↗</span>
+                </a>
+                <a href="https://linkedin.com/in/balasubramanian-g-83313131b" target="_blank" rel="noopener noreferrer" class="bp-channel-link">
+                  <span>LINKEDIN: linkedin.com/in/balasubramanian-g-83313131b</span>
+                  <span>↗</span>
+                </a>
+                <a href="https://github.com/Balasubramanian-2007" target="_blank" rel="noopener noreferrer" class="bp-channel-link">
+                  <span>GITHUB: github.com/Balasubramanian-2007</span>
+                  <span>↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Pre-formatted Transmission Generator -->
+            <div class="bp-quick-form">
+              <div class="bp-form-title">TRANSMIT DIRECT INQUIRY (MAILTO ENGINE)</div>
+              <p style="font-size:0.85rem; color:var(--bp-annotation);">
+                Select an inquiry type below to generate a pre-formatted technical dispatch directly in your default email client:
+              </p>
+
+              <div style="display:flex; flex-direction:column; gap:10px; margin-top:8px;">
+                <a href="mailto:subramaniang172@gmail.com?subject=Engineering%20Role%20Inquiry%20-%20Balasubramanian%20G&body=Hi%20Balasubramanian,%0A%0AWe%20reviewed%20your%20engineering%20portfolio%20and%20would%20like%20to%20discuss%20an%20engineering%20opportunity%20at%20our%20company.%0A%0ARole:%0ATeam:%0ALocation:%0A" class="bp-btn bp-btn-primary" style="justify-content:center;">
+                  <span>DISPATCH: RECRUITMENT INQUIRY</span> ↗
+                </a>
+
+                <a href="mailto:subramaniang172@gmail.com?subject=Technical%20Collaboration%20-%20Balasubramanian%20G&body=Hi%20Balasubramanian,%0A%0AI%20am%20interested%20in%20discussing%20your%20work%20on%20BidPulse%20concurrency%20/%20Offline%20RAG%20retrieval.%0A%0AProject%20Overview:%0A" class="bp-btn bp-btn-outline" style="justify-content:center;">
+                  <span>DISPATCH: TECHNICAL COLLABORATION</span> ↗
+                </a>
+
+                <button type="button" class="bp-btn bp-btn-ghost" onclick="window.print()" style="justify-content:center;">
+                  <span>PRINT COMPLETE ENGINEERING DOSSIER</span> 
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       ENGINEERING DOSSIER MODAL
+       ========================================================================== -->
+  <div id="dossierModal" class="bp-modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="bp-modal-sheet">
+      <div class="bp-modal-header">
+        <div>
+          <span id="modalSpecNo" class="mono" style="color:var(--bp-cobalt); font-size:0.75rem; font-weight:700;">DWG-BP-001</span>
+          <span style="margin: 0 8px; color:var(--bp-border);">|</span>
+          <span id="modalStatus" class="mono" style="color:var(--bp-signal-orange); font-size:0.75rem;">VERIFIED IMPLEMENTATION</span>
+        </div>
+        <button id="modalCloseBtn" class="bp-modal-close-btn" aria-label="Close Engineering Dossier">✕ CLOSE</button>
+      </div>
+
+      <div class="bp-modal-content">
+        <h3 id="modalTitle" style="font-family:var(--font-editorial); font-size:1.6rem; color:var(--bp-deep-blue); margin-bottom:12px;"></h3>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER — DRAWING CERTIFICATION
+       ========================================================================== -->
+  <footer class="bp-footer">
+    <div class="bp-container">
+      <div class="bp-footer-grid">
+        <div class="bp-cert-box">
+          <span>DWG: BALA-SYS-2026</span>
+          <span>APPROVED: B.G.</span>
+          <span>STANDARDS: ISO 128 / W3C AA</span>
+        </div>
+
+        <div>
+          Designed &amp; Engineered by <span style="color:var(--bp-deep-blue); font-weight:700;">Balasubramanian G</span> · 2026
+        </div>
+
+        <div class="mono" style="font-size:0.72rem;">
+          HOSTED VIA GITHUB PAGES · DEPLOYED AT /My_Portfolio/
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Single Source of Truth Metrics & Blueprint Engine -->
+  <script src="./portfolio-data.js"></script>
+  <script src="./blueprint.js"></script>
+</body>
+</html>
