@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="8" fill="#102B52"/>
+  <!-- Blueprint Grid lines -->
+  <line x1="8" y1="8" x2="56" y2="8" stroke="#2155D9" stroke-width="0.75" stroke-opacity="0.5"/>
+  <line x1="8" y1="56" x2="56" y2="56" stroke="#2155D9" stroke-width="0.75" stroke-opacity="0.5"/>
+  <line x1="8" y1="8" x2="8" y2="56" stroke="#2155D9" stroke-width="0.75" stroke-opacity="0.5"/>
+  <line x1="56" y1="8" x2="56" y2="56" stroke="#2155D9" stroke-width="0.75" stroke-opacity="0.5"/>
+  <line x1="32" y1="4" x2="32" y2="60" stroke="#2155D9" stroke-width="0.5" stroke-dasharray="2 2" stroke-opacity="0.4"/>
+  <line x1="4" y1="32" x2="60" y2="32" stroke="#2155D9" stroke-width="0.5" stroke-dasharray="2 2" stroke-opacity="0.4"/>
+  <!-- Corner ticks -->
+  <path d="M 6 12 L 6 6 L 12 6" fill="none" stroke="#FF6538" stroke-width="1.5"/>
+  <path d="M 52 6 L 58 6 L 58 12" fill="none" stroke="#FF6538" stroke-width="1.5"/>
+  <path d="M 6 52 L 6 58 L 12 58" fill="none" stroke="#FF6538" stroke-width="1.5"/>
+  <path d="M 52 58 L 58 58 L 58 52" fill="none" stroke="#FF6538" stroke-width="1.5"/>
+  <!-- Center Monogram 'BG' in technical drafting style -->
+  <text x="32" y="38" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="20" font-weight="800" fill="#F4F0E6" text-anchor="middle" letter-spacing="1">BG</text>
+  <circle cx="48" cy="22" r="2.5" fill="#FF6538"/>
+</svg>
